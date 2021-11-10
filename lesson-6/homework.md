@@ -18,13 +18,13 @@
     def get_post_list(request):
     	posts = Post.objects.filter(is_published=True)
     	data = [
-    		{
-    			'id': post.id,
-    			'title': post.title,
-    			'text': post.text,
-    			'date': post.created_at
-    		} for post in posts
-    	]
+            {
+                'id': post.id,
+                'title': post.title,
+                'text': post.text,
+                'date': post.created_at
+            } for post in posts
+        ]
     	return JsonResponse({'posts': data})
 
 3. Подключить все созданные модели в админку, используем verbose name для полей и моделей, а также добавляем фильтрацию, поиск и всякое, что приглянется в документации
