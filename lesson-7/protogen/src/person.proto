@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package tutorial;
+option go_package = "./";
+
+message Person {
+   string user_name = 1;
+   int64 favorite_number = 2;
+   repeated string interests = 3;
+}
